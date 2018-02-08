@@ -6,7 +6,12 @@
 
 Date::Date() :day(24), mon(month(11)), year(1995) {}
 
-Date::Date(int d, month m, int y) :day(d), mon(m), year(y) {}
+Date::Date(int d, month m, int y) 
+{
+	this->setYear(y);
+	this->setMon(month(m));
+	this->setDay(d);
+}
 
 Date::Date(const Date &obj) : day(obj.day), mon(obj.mon), year(obj.year) {}
 
